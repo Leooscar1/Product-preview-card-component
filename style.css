@@ -1,0 +1,134 @@
+/* Import Google Fonts Fraunces and Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Define CSS Variables */
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);  /* Define custom color variable */
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Global styles */
+*{
+    margin: 0;  /* reset margin */
+    padding: 0;  /* reset padding */
+    box-sizing: border-box;   /* make the both card same size*/
+    font-family:'Montserrat', sans-serif;  /* Set default font-family */
+}
+body {
+    background-color: antiquewhite;  /* Set background color */
+    min-height: 100vh;  /* Set minimum height to full viewport height */
+    display: flex;  /* Set flex layout */
+    flex-direction: row;  /* Set flex direction to row */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    /* Set font-family */
+}
+/* Card Style */
+.card {
+    height: 26rem;  /* Set height */
+    background-color: var(--White);  /* Set background color using variable */
+    border-radius: 10px;  /* Set border radius */
+    display: flex;  /* Set flex layout */
+}
+
+
+.perfum-img-d-left-card{
+    width: 17.5rem;  /* Set width */
+    border-top-left-radius: 10px;  /* Set top-left border radius */
+    border-bottom-left-radius: 10px;  /* Set bottom-left border radius */
+}
+
+.perfume-img-m-left-card{
+    display: none;
+}
+
+.card-right{
+    height: 26em;  /* Set height */
+    width: 17.5rem;  /* Set width */
+    padding: 1.9rem; /* Set padding to card*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+}
+.title{
+    font-size: 11px;  /* Set font size */
+    color: var(--Dark-grayish-blue);  /* Set color using variable */
+    font-weight: 400;  /* Set font weight */
+    letter-spacing: 5px;  /* Set letter spacing */
+}
+.sub-text {
+    font-family: 'Fraunces', serif;  /* Set font-family */
+    font-size: 1.9rem;  /* Set font size */
+    line-height: 30px;  /* Set line height */
+}
+.desc {
+    font-weight: 400;  /* Set font weight */
+    font-size: 0.85rem;  /* Set font size */
+    color: var(--Dark-grayish-blue);  /* Set color using variable */
+    line-height: 20px;  /* Set line height */
+}
+
+/* Price Div */
+.price-div{
+    display: flex;
+}
+.big-price {
+    font-family: 'Fraunces', serif;  /* Set font-family */
+    color: var(--Dark-cyan);  /* Set color using variable */
+    font-weight: 700;  /* Set font weight */
+    font-size: 2rem;  /* Set font size */
+}
+.small-price {
+    color: var(--Dark-grayish-blue);  /* Set color using variable */
+    font-size: 0.8rem;  /* Set font size */
+    margin-left: 1rem;  /* Set margin left */
+    text-decoration: line-through;  /* Add line-through decoration */
+    font-weight: 400;  /* Set font weight */
+    margin-top: 0.8rem;
+}
+button {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-weight: 700;  /* Set font weight */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+button:hover{
+    background-color:hsla(120, 100%, 20%, 0.534) ;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 560px) {
+    .card {
+        flex-direction: column;  /* Set flex direction to column */
+        height: 39rem;  /* Set height */
+        width: 21rem;  /* Set width */
+    }
+
+    .perfum-img-d-left-card{
+        display: none;  /* Hide in mobile view */
+    }
+
+    .card-right {
+        width: 21rem;  /* Set width */
+    }
+
+    .perfume-img-m-left-card{
+        height: 13rem;  /* Set height */
+        display: block;  /* Show in mobile view */
+        width: 100%;  /* Set width to 100% */
+        border-top-left-radius: 10px;  /* Set top-left border radius */
+        border-top-right-radius: 10px;  /* Set top-right border radius */
+    }
+}
